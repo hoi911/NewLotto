@@ -7,7 +7,7 @@ My college winter test project with Python
 ## Auto Lotto Generator
 
 Write some codes that generates Lotto number<br>
-Based on korean lotto 7/45
+Based on korean lotto 6/45
 
 ---
 
