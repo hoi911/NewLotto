@@ -1,11 +1,13 @@
 from random import *
 
+allowedCommand = ['rock', 'scissors', 'paper', 'exit']
+
 while True:
     AI = ['rock', 'scissors', 'paper']
     print("Enter your choice\nOnly 'rock', 'scissors', 'paper'")
     user = input("Make your decisions: ")
 
-    while user != 'rock' and user != 'scissors' and user != 'paper':
+    while not user in allowedCommand:
         print("Please Enter correct word!")
         user = input("Make your decisions: ")
 
