@@ -31,3 +31,20 @@ while True:
         break
 
 print(f"자동 번호는 {number} 입니다.")
+
+# 반복문이 너무 많습니다. 아래 코드랑 비교해보면서 생각해보십시오.
+loop = 0
+number = [0, 0, 0, 0, 0, 0]
+
+def isDuplicate(num):
+    return num in number
+
+while loop < 6:
+    newNumber = randint(0, 45)
+    while isDuplicate(newNumber):
+        newNumber = randint(0, 45)
+    number[loop] = newNumber
+    loop += 1
+
+print(f"자동 번호는 {number} 입니다.")
+    
