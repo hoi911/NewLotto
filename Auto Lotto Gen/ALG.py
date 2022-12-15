@@ -36,7 +36,7 @@ print(f"자동 번호는 {number} 입니다.")
 loop = 0
 number = [0, 0, 0, 0, 0, 0]
 
-def checkDuplication(num):
+def isDuplicate(num):
     return num in number
 
 while loop < 6:
