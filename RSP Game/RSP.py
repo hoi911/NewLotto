@@ -7,7 +7,7 @@ while True:
     print("Enter your choice\nOnly 'rock', 'scissors', 'paper'")
     user = input("Make your decisions: ")
 
-    while !(user in allowedCommand):
+    while not user in allowedCommand:
         print("Please Enter correct word!")
         user = input("Make your decisions: ")
 
