@@ -3,7 +3,6 @@ mon30 = [4, 6, 9, 11]
 mon28 = 2
 
 def calcDate(fromDate: str, toDate: str):
-	loop = 1
 	remainDay = 0
 
 	fromMonth = int(fromDate[0])  # from month
@@ -22,9 +21,9 @@ def calcDate(fromDate: str, toDate: str):
 
 def parseDate(date: str):
 	results = date.split("/")
-	print(results)
+	# print(results) For Debug
 	if len(results) != 2:
-		print("여기도 걸려용")
+		# print("여기도 걸려용") For Debug
 		return None
 	return results
 
@@ -42,7 +41,7 @@ def countDays(fromDate: str, toDate: str):
 	parsedFromDate = parseDate(fromDate)
 	parsedToDate = parseDate(toDate)
 	if parsedFromDate == None or parsedToDate == None :
-		print("여기 걸려용")
+		# print("여기 걸려용") For Debug
 		return None
 
 	return calcDate(parsedFromDate, parsedToDate)
@@ -53,4 +52,4 @@ def countDays(fromDate: str, toDate: str):
 userGetF = input("시작 날을 입력해주세요: ")
 userGetT = input("끝나는 날을 입력해주세요: ")
 
-print(countDays(userGetF, userGetT))
+print(f"{countDays(userGetF, userGetT)}")
