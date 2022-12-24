@@ -48,3 +48,8 @@ while loop < 6:
 
 print(f"자동 번호는 {number} 입니다.")
     
+
+for x in number:
+    x = randint(0, 45)
+    while isDuplicate(x)
+        x = randint(0, 45)
