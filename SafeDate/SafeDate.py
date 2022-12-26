@@ -6,20 +6,18 @@ mon28 = 2
 
 def dayCalc(month, year):
 	if month in mon31:
-		print("이곳")
+		# print("이곳") For Debug
 		return 31
 	elif month in mon30:
-		print("저곳")
+		# print("저곳") For Debug
 		return 30
 	elif month == mon28:
 		if leapYear(year):
-			print("그곳")
+			# print("그곳") For Debug
 			return 29
 		else:
-			print("어느곳")
+			# print("어느곳") For Debug
 			return 28
-	else:
-		print("안 들어감")
 
 def asiaCountry(presentDate, foodDate):
 	if foodDate[1] == 0 or foodDate[2] == 0: return None
@@ -44,10 +42,10 @@ def restCountry(presentDate, foodDate):
 
 def leapYear(year: int):
 	if year % 4:
-		#print("왜 여기임")
+		# print("왜 여기임") For Debug
 		return False
 	else:
-		#print("이건 왜 여기임")
+		# print("이건 왜 여기임") For Debug
 		return True
 
 def FoodDate():
@@ -59,19 +57,22 @@ def FoodDate():
 def presentDate():
 	presentYear = randint(0, 99)
 	presentMonth = randint(1, 12)
-	#presentMonth = 2
+	# presentMonth = 2 For Debug
 	presentDay = randint(1, dayCalc(presentMonth, presentYear))
-	#if presentMonth in mon31:
-	#	presentDay = randint(1, 31)
-	#elif presentMonth in mon30:
-	#	presentDay = randint(1, 30)
-	#elif presentMonth == mon28:
-	#	if leapYear(presentYear):
-	#		presentDay = randint(1, 29)
-	#		#print("Here")
-	#	else:
-	#		presentDay = randint(1, 28)
-			#print("Why")
+
+	"""if presentMonth in mon31:
+		presentDay = randint(1, 31)
+	elif presentMonth in mon30:
+		presentDay = randint(1, 30)
+	elif presentMonth == mon28:
+		if leapYear(presentYear):
+			presentDay = randint(1, 29)
+			#print("Here")
+		else:
+			presentDay = randint(1, 28)
+			print("Why")
+	최적화 시켜서 일단 주석처리"""
+
 	return presentYear, presentMonth, presentDay
 
 def safeDateCheck(date: int, food: int):
@@ -93,12 +94,12 @@ preDate = presentDate()
 safeCount, unSafeCount, invalidCount = 0, 0, 0
 
 print(f"오늘의 날짜는 {preDate[0]+2000}년 {preDate[1]}월 {preDate[2]}일 입니다.")
-#print(dayCalc(preDate[1], preDate[0]))
+# print(dayCalc(preDate[1], preDate[0])) For Debug
 
 for i in range(1, numberOfFood+1):
 	foodDate = FoodDate()
-	print(foodDate)
-	#safeDateCheck(preDate, foodDate)
+	# print(foodDate) For Debug
+	# safeDateCheck(preDate, foodDate) For Debug
 	if safeDateCheck(preDate, foodDate) == 1:
 		print(f"{foodDate[0]} {foodDate[1]} {foodDate[2]} safe")
 		safeCount += 1
